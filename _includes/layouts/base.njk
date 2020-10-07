@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metadata.title }} - {{ title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <meta property="og:title" content="{{ metadata.title }} - {{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ metadata.url}}{{ postHeaderImageUrl }}" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="/"><img src="/img/obsolete29-nav.jpg" alt="Image of Mike drinking a cup of coffee" class="header-image"></a>
+                <nav>
+                    <a href="/thoughts/" class="top-nav-link">Thoughts</a>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+    <main>
+            <div class="container">
+        {{ content | safe }}
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <section class="social-bar">
+                <a href="https://twitter.com/obsolete29"><img class="social-icons" src="/img/iconfinder_twitter_834708.svg" alt="twitter icon"></a>
+                <a href="mailto:mike@obsolete29.com"><img src="/img/iconfinder_Mail_1891029.svg" alt="mail icon" class="social-icons"></a>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "eleventy-obsolete29",
+  "version": "1.0.0",
+  "description": "Eleventy templates and settings for obsolete29.com",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mharleydev/eleventy-obsolete29.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mharleydev/eleventy-obsolete29/issues"
+  },
+  "homepage": "https://github.com/mharleydev/eleventy-obsolete29#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-img": "^0.3.0"
+  }
+}

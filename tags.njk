@@ -1,0 +1,31 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+eleventyComputed:
+  title: "#{{ tag }}"
+permalink: /thoughts/{{ tag }}/
+changeFreq: weekly
+---
+<h1>#{{ tag }}</h1>
+<div class="post-list">
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+  <div class="post-summary">
+      <time>{{ post.data.date.toDateString() }}</time>
+      <div class="icon-title-post-container">
+          <img src="{{ post.data.icon }}" class="post-icon" alt="">
+            <a href="{{ post.url | url }}" class="post-summary-title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      </div>
+  </div>
+{% endfor %}
+</div>
+
+

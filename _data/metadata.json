@@ -1,0 +1,17 @@
+
+{
+    "title": "@obsolete29",
+    "url": "https://obsolete29.com",
+    "description": "I'm a goblin herder.",
+    "feed": {
+      "subtitle": "I'm a goblin herder.",
+      "filename": "feed.xml",
+      "path": "/feed/feed.xml",
+      "id": "https://obsolete29.com"
+    },
+    "author": {
+      "name": "@obsolete29",
+      "email": "mike@obsolete29.com",
+      "url": "https://obsolete29.com"
+    }
+  }

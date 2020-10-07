@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: Thoughts
+changeFreq: daily
+---
+<p>I like to talk about: 
+    {% for tag in collections.tagList.sort() %}
+    {% set tagUrl %}/thoughts/{{ tag }}/{% endset %}
+    <a href="{{ tagUrl | url }}" class="post-summary-tag">#{{ tag }}</a>
+    {% endfor %}
+</p>
+<div class="post-list">
+{% for post in collections.posts | reverse %}
+  <div class="post-summary">
+      <time>{{ post.data.date.toDateString() }}</time>
+      <div class="icon-title-post-container">
+          <img src="{{ post.data.icon }}" class="post-icon" alt="">
+            <a href="{{ post.url | url }}" class="post-summary-title">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      </div>
+  </div>
+{% endfor %}
+</div>
+
+

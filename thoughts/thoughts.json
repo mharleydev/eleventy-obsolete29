@@ -1,0 +1,7 @@
+{
+    "layout": "layouts/post.njk",
+    "tags": [
+        "posts"
+    ],
+    "changeFreq": "weekly"
+}

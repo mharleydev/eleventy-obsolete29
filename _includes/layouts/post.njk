@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+    <h1 class="post-title">{{ title }}</h1>
+    <time>{{ date.toDateString() }}</time>
+    <section class="post-tag">
+        {% for tag in tags %}
+            {% if tag != "posts" %}
+            {% set tagUrl %}/thoughts/{{ tag }}/{% endset %}
+                <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <section class="post-content">
+    {{ content | safe }}
+    </section>
+</article>
